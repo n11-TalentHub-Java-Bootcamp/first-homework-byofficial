@@ -10,7 +10,7 @@ public class FindAllProductReviewCountListApp {
         public static void main(String[] args) {
             //Problem 3 Solved
             ProductReviewEntityService service = new ProductReviewEntityService();
-            List<ProductReviewCountDto> productReviewCountList = service.findProductReviewCount(1L);
+            List<ProductReviewCountDto> productReviewCountList = service.findProductReviewCount();
 
             for (ProductReviewCountDto productReviewCountDto : productReviewCountList){
                 System.out.println(productReviewCountDto);

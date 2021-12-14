@@ -17,7 +17,7 @@ public class ProductReviewEntityService {
         return productReviewDao.findAllProductReviewList(id);
     }
 
-    public List<ProductReviewCountDto> findProductReviewCount(Long id){
-        return productReviewDao.findProductReviewCount(id);
+    public List<ProductReviewCountDto> findProductReviewCount(){
+        return productReviewDao.findProductReviewCount();
     }
 }

@@ -25,18 +25,17 @@ public class ProductReviewDao extends BaseDao implements IDao{
         return query.list();
     }
 
-    public List<ProductReviewCountDto> findProductReviewCount(Long id){
+    public List<ProductReviewCountDto> findProductReviewCount(){
 
         String sql=
                 "select " +
-                "new DTOs.ProductReviewCountDto(product.id, product.productName, product.price, count(review)) " +
+                "new DTOs.ProductReviewCountDto(product.id, product.productName, product.price, count(review.id)) " +
                 "from ProductReview review " +
                 "left join Product product on product.id = review.productId.id " +
-                "where review.productId.id = :id " +
                 "group by  product.id" ;
 
         Query query = getCurrentSession().createQuery(sql);
-        query.setParameter("id", id);
+
 
         return query.list();
     }
