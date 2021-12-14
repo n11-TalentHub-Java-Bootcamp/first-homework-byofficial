@@ -21,6 +21,11 @@
         <!-- Update database on startup -->
         <property name="hibernate.hbm2ddl.auto">create</property>
 
+        <!-- Annotated entity classes -->
+        <mapping class="Entities.User"/>
+        <mapping class="Entities.Category"/>
+        <mapping class="Entities.Product"/>
+        <mapping class="Entities.ProductReview"/>
 
     </session-factory>
 </hibernate-configuration>
